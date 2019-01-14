@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
+      ArgumentProcessor.SplitArguments( '*resolve arg0, arg1, arg2, arg3', 1 );
       let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
       if(!rUser) return message.channel.send("ERR: Couldn't find user.");
       let reportedUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[1]));
